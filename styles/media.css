@@ -1,0 +1,82 @@
+@media screen and (min-width: 1180px) {
+  input[id^='meme-']:checked ~ .meme-img-container,
+  .meme:hover .meme-img-container {
+    height: 30rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .meme-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .meme-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .meme-title {
+    font-size: 0.9rem;
+  }
+
+  input[id^='meme-']:checked ~ .meme,
+  .meme:hover .meme {
+    height: 18rem;
+  }
+}
+
+@media (hover: hover) {
+  .meme,
+  .accordion {
+    cursor: pointer;
+  }
+
+  .meme .meme-title-container {
+    cursor: pointer;
+  }
+
+  .meme:hover .meme-title-container .title {
+    color: #fff;
+  }
+
+  .accordion:hover svg {
+    opacity: 1;
+  }
+
+  .meme:hover svg {
+    transform: rotate(-90deg);
+    color: #fff;
+  }
+}
+
+@media (hover: none) {
+  .accordion:hover .meme {
+    background-color: #fff;
+  }
+
+  .meme:hover .meme-title-container .title {
+    color: #000;
+  }
+
+  .accordion svg {
+    opacity: 1;
+  }
+
+  .meme:hover svg {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+}
